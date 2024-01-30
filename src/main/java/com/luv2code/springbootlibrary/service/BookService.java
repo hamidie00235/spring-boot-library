@@ -5,6 +5,7 @@ import com.luv2code.springbootlibrary.dao.CheckoutRepository;
 import com.luv2code.springbootlibrary.entity.Book;
 import com.luv2code.springbootlibrary.entity.Checkout;
 import jakarta.persistence.Table;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
@@ -12,6 +13,7 @@ import java.util.Optional;
 
 @Table
 @Transactional
+@Service
 public class BookService {
     private BookRepository bookRepository;
     private CheckoutRepository checkoutRepository;
