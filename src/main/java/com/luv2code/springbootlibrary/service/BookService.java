@@ -4,10 +4,11 @@ import com.luv2code.springbootlibrary.dao.BookRepository;
 import com.luv2code.springbootlibrary.dao.CheckoutRepository;
 import com.luv2code.springbootlibrary.entity.Book;
 import com.luv2code.springbootlibrary.entity.Checkout;
-import jakarta.persistence.Table;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.Table;
 import java.time.LocalDate;
 import java.util.Optional;
 
@@ -52,5 +53,9 @@ public int currentLoansCount(String userEmail){
 }
 
 
+    public void currentLoans(String userEmail) {
+    }
 
+    public void returnBook(String userEmail, Long bookId) {
+    }
 }
