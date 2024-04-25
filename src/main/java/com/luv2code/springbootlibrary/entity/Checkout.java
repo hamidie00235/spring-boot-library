@@ -1,7 +1,10 @@
 package com.luv2code.springbootlibrary.entity;
 
-import jakarta.persistence.*;
+
 import lombok.Data;
+import org.springframework.data.annotation.Id;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name="checkout")
@@ -16,6 +19,8 @@ public class Checkout {
         this.returnDate=returnDate;
         this.bookId=bookId;
     }
+
+    @javax.persistence.Id
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
@@ -28,4 +33,12 @@ public class Checkout {
    private  String returnDate;
     @Column(name="book_id")
     private Long bookId;
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }

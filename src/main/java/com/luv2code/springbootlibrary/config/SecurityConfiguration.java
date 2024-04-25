@@ -10,6 +10,7 @@ import org.springframework.web.accept.HeaderContentNegotiationStrategy;
 
 @Configuration
 public class SecurityConfiguration {
+
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
@@ -39,4 +40,5 @@ public class SecurityConfiguration {
 
         return http.build();
     }
+
 }
